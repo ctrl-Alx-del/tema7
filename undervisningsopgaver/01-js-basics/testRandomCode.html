@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is a test</title>
+
+</head>
+
+<body>
+
+    <div id="numero">0</div>
+    <button type="button" onclick="numberIncrease()">increase number</button>
+
+    <script>
+        let number = 5;
+
+        function numberIncrease() {
+            number++;
+        }
+
+        document.querySelector("#numero").innerHTML = number;
+
+    </script>
+</body>
+
+
+
+</html>
