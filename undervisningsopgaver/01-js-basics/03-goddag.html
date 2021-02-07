@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        #button1 {
+            height: 30%;
+            width: 25%;
+            font-size: 1rem;
+            text-align: center;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div><input type="text" id="name"></div>
+    <div id="button1">Clickety click</div>
+
+    <script>
+        document.querySelector("#button1").addEventListener("click", respons);
+
+        function respons() {
+            let myName;
+            myName = document.querySelector("#name").value;
+            console.log("Goddag " + myName);
+        }
+
+    </script>
+</body>
+
+</html>
