@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is a test</title>
+    <style>
+        #minKnap {
+            background-color: aqua;
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="minKnap">yee click me</div>
+    <div id="counter">0</div>
+
+    <script>
+        let cow = 0;
+        minKnap.addEventListener("click", funktionDerSkalAktiveresNårDerKlikkes);
+
+
+        function funktionDerSkalAktiveresNårDerKlikkes() {
+            cow++;
+            console.log("Jeg har klikket på knappen");
+            console.log(cow);
+            document.querySelector("#counter").innerHTML = cow;
+        }
+
+    </script>
+</body>
+
+
+
+</html>

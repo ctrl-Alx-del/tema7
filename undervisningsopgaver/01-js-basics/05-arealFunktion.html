@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        #button1 {
+            height: 30%;
+            width: 25%;
+            font-size: 1rem;
+            text-align: center;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div><input type="text" id="lengthInput"></div>
+    <div><input type="text" id="widthInput"></div>
+    <div id="areaDisplay"></div>
+    <div id="button1">Clickety click</div>
+
+    <script>
+        let area;
+
+        document.querySelector("#button1").addEventListener("click", updateDisplay);
+
+        function areaCalc() {
+            length = document.querySelector("#lengthInput").value;
+            width = document.querySelector("#widthInput").value;
+            //På linje 36 tager den de ovenstående variabler man har givet, som input i browseren og lægger dem ind i en anden funktion der ganger dem sammen. Værdien bliver så returneret og indsat i en ny variabel der kaldes for area. length og width er argumenter i funktionen areaSpecific(). Det er parametrene l og w der gør at den kan tage length og width, som input.
+            area = arealSpecific(length, width);
+            console.log("Area calculated");
+            console.log(area);
+            return area;
+        }
+
+        function updateDisplay() {
+            document.querySelector("#areaDisplay").innerHTML = areaCalc();
+            console.log("Displayed calculation");
+        }
+
+        function arealSpecific(l, w) {
+            return l * w;
+        }
+
+    </script>
+</body>
+
+</html>
