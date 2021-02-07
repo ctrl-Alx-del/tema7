@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        #button1 {
+            height: 30%;
+            width: 25%;
+            font-size: 1rem;
+            text-align: center;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="areaDisplay"></div>
+    <div><input type="text" id="lengthInput"></div>
+    <div><input type="text" id="widthInput"></div>
+    <div id="button1">Clickety click</div>
+
+    <script>
+        let myLength;
+        let myWidth;
+        let area;
+
+        document.querySelector("#button1").addEventListener("click", updateDisplay);
+
+        function getValues() {
+            myLength = document.querySelector("#lengthInput").value;
+            myWidth = document.querySelector("#widthInput").value;
+            area = myLength * myWidth;
+            console.log(area);
+            return area;
+        }
+
+        function updateDisplay() {
+            document.querySelector("#areaDisplay").innerHTML = getValues();
+        }
+
+    </script>
+</body>
+
+</html>
