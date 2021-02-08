@@ -12,16 +12,30 @@
 
 <body>
 
+
+    <input type="text" id="bredde">
+    <input type="text" id="længde">
+
+    <button>click</button>
+
     <script>
-        function visBesked(message) {
-            let first = "Info: ";
-            return `${first} ${message}`;
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let bredde = document.querySelector("#bredde").value;
+            let længde = document.querySelector("#længde").value;
+            let a = areal(længde, bredde);
+            let resultat;
+            if (isNaN(a)) {
+                resultat = "det er ikke et tal";
+            }
+            console.log(resultat)
+
         }
-        let besked = "Kamilla underviser i morgen";
-        console.log(visBesked(besked));
-        let info = "Martin underviser i dag";
-        console.log(visBesked(info));
-        console.log(visBesked("Louise underviser først i næste uge"));
+
+        function areal(l, b) {
+            return l * b;
+        }
 
     </script>
 </body>
