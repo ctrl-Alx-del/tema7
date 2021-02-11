@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div id="time_show">
+    </div>
+    <div id="message"></div>
+
+    <script>
+        let time = new Date().getHours();
+
+        time_show.innerHTML = time;
+        message.innerHTML = timeOfTheDay();
+
+
+        function timeOfTheDay(time) {
+            if (10 > time > 5) {
+                console.log("Godmorgen");
+            } else if (18 > time > 10) {
+                console.log("Goddag");
+            } else if (24 > time > 18) {
+                console.log("Godaften");
+            } else if (5 > time > 24) {
+                console.log("Godnat");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
