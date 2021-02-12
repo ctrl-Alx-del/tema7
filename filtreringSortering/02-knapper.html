@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
         button {
             border-radius: 3rem;
             background-color: greenyellow;
             margin: auto;
+            padding-right: 20px;
+            padding-left: 20px;
         }
 
         body {
@@ -46,10 +53,10 @@
 <body>
 
     <nav>
-        <button #Alle data-troende="troende" class="valgt">Alle</button>
-        <button data-troende="ja" class="valgt">Troende</button>
-        <button data-troende="nej" class="valgt">Ikke troende</button>
-        <button data-troende="tvivler" class="valgt">Tvivler</button>
+        <button data-troende="troende" id="Knap" class="">Alle</button>
+        <button data-troende="ja" id="Knap" class="valgt">Troende</button>
+        <button data-troende="nej" id="Knap" class="">Ikke troende</button>
+        <button data-troende="tvivler" id="Knap" class="">Tvivler</button>
     </nav>
 
     <section id="liste"></section>
@@ -64,6 +71,7 @@
 
 
     <script>
+        document.querySelector("#Knap").addEventListener("click", valgte);
         const header = document.querySelector("header h1");
         const medieurl = "https://persongalleri-5d3e.restdb.io/media/";
         const myHeaders = {
@@ -106,6 +114,11 @@
                     dest.appendChild(klon);
                 }
             })
+        }
+
+        function valgte() {
+            document.querySelector("#Knap").classList.add("valgt");
+            console.log("yee");
         }
 
     </script>
