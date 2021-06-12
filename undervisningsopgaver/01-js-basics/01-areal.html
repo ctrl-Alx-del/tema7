@@ -9,17 +9,12 @@
 </head>
 
 <body>
-
-    <div id="areaDisplay"></div>
-
     <script>
-        document.querySelector("#areaDisplay").innerHTML = areaCalc();
-
-        function areaCalc(length, width) {
-            let area;
-            area = length * width;
-            return area;
-        }
+        let længde = 3;
+        let bredde = 5;
+        let areal = længde * bredde;
+        let resultat = `Længden er ${længde} meter og ${bredde} er 5 meter. Arealet er ${areal}`;
+        console.log(resultat);
 
     </script>
 </body>
