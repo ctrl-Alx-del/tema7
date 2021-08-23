@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div><input type="text" id="timerInput"></div>
+    <div id="button1">Clickety click</div>
+
+    <script>
+
+document.querySelector("#button1").addEventListener("click", co2Udregning);
+
+
+function co2Udregning(timer){
+    
+            timer = document.querySelector("#timerInput").value;
+    
+            let co2udledning = timer * 109;
+
+            if(co2udledning < 100) {
+                console.log(`Du har fløjet ${timer} og udledt ${co2udledning} kg Co2. 
+                Tæt på Thunberg.`);
+            } else if (100 <= co2udledning && co2udledning <= 200) {
+                console.log(`Du har fløjet ${timer} og udledt ${co2udledning} kg Co2. 
+                Ja ja, du behøver ikke at melde dig ud af Å!`); 
+             } else if (200 <= co2udledning && co2udledning <= 600) {
+                console.log(`Du har fløjet ${timer} og udledt ${co2udledning} kg Co2. 
+                Det er godt for turismen i nordeuropa.`); 
+             } else if (600 < co2udledning){
+                console.log(`Du har fløjet ${timer} og udledt ${co2udledning} kg Co2. 
+                Nå ja vi kan jo altid kolonisere en anden planet ...`); 
+             } else if (isNaN(timer) == true)  {
+                console.log("Not a number");
+             }
+
+            return co2udledning;
+        }
+        
+    </script>
+</body>
+
+</html>
