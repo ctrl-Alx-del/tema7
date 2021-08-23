@@ -10,11 +10,11 @@
 
 <body>
 
-    <div id="time_show">
-    </div>
+    <div id="time_show"></div>
     <div id="message"></div>
 
     <script>
+        
         let time = new Date().getHours();
 
         time_show.innerHTML = time;
@@ -22,14 +22,15 @@
 
 
         function timeOfTheDay(time) {
-            if (10 > time > 5) {
-                console.log("Godmorgen");
-            } else if (18 > time > 10) {
-                console.log("Goddag");
-            } else if (24 > time > 18) {
-                console.log("Godaften");
-            } else if (5 > time > 24) {
-                console.log("Godnat");
+
+            if (10 >= time && time >= 5) {
+                window.console.log("Godmorgen");
+            } else if (18 >= time && time >= 11) {
+                window.console.log("Goddag");
+            } else if (24 > time && time >= 19) {
+                window.console.log("Godaften");
+            } else {
+                window.console.log("Godnat");
             }
         }
 
