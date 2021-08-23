@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div><input type="text" id="guess"></div>
+    <div id="button1">Clickety click</div>
+
+    <script>
+
+document.querySelector("#button1").addEventListener("click", guessNumber);
+
+function guessNumber() {
+let guess = document.querySelector("#guess").value;
+let randomNumber = Math.round(Math.random()*20);
+
+if(guess == randomNumber){
+    console.log("Du gættede rigtigt!");
+    console.log(randomNumber);
+} else {
+    console.log("Du gættede forkert");
+    console.log(randomNumber);
+    }
+}
+
+
+
+    </script>
+</body>
+
+</html>
