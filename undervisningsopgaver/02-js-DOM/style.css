@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1em;   
+}
+
+img {
+    width: 100%;
+}
+
+main{
+    margin: 4em;
+}
+
+footer {
+    text-align: center;
+}
