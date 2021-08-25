@@ -50,8 +50,6 @@
 let changeText = document.querySelector("h1");
 changeText.textContent = "noget andet tekst";
 
-
-
 let article = document.querySelector("article h3");
 let articleParagraph = document.querySelector("article p");
 
@@ -63,13 +61,18 @@ let articlePlus = document.querySelector("article + article");
 let paragraph = document.querySelector("h3 + p");
 
 article2.innerHTML = "artikel 2 ændret";
-article2Paragraph.innerHTML = "<b>ny tekst</b> i paragraph";
+article2Paragraph.innerHTML = "ny tekst i paragraph";
 
 article.textContent = "artikel 1 ændret";
 articleParagraph.textContent = "ny paragraph";
 
-console.log(article);
-console.log(img2);
+
+let img1 = document.querySelector("article:nth-child(1) img");
+
+img1.src = "laptop.jpg";
+img1.alt = "laptop på bord";
+
+console.log(img1);
 
 
 
