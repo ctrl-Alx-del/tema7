@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/arch" alt="img1">
+                <h3>article 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat repellat, vel quidem maxime,
+                    quod quas voluptate debitis adipisci iure, repellendus molestias reiciendis nemo nihil dolore
+                    molestiae. Ea provident aliquam consectetur natus ratione saepe illum ipsam eius suscipit tempore,
+                    dolorem eligendi deserunt dicta incidunt atque laudantium veritatis tenetur? Distinctio, tempore.
+                </p>
+            </article>
+
+            <article>
+                <img src="https://placeimg.com/640/480/arch" alt="img2">
+                <h3>article 2</h3>
+                <p>Kage Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis placeat accusantium modi ipsum
+                    deserunt excepturi dolorem, consequuntur aliquam, nemo dignissimos voluptatem consequatur repellat
+                    molestiae veritatis. Sint officiis, culpa error numquam molestias corporis, illum fugiat
+                    exercitationem ipsum harum dolores dignissimos dolore? Illo, corporis unde? Similique voluptatem
+                    eveniet reprehenderit et, vel amet.</p>
+
+            </article>
+        </section>
+
+    </main>
+
+    <footer><p>this is the footer</p></footer>
+
+
+<script>
+
+let changeText = document.querySelector("h1");
+changeText.textContent = "noget andet tekst";
+
+let article = document.querySelector("article h3");
+let articleParagraph = document.querySelector("article p");
+
+let article2Paragraph = document.querySelector("article:nth-child(2) p");
+let article2 = document.querySelector("article:nth-child(2) h3");
+
+let articlePlus = document.querySelector("article + article");
+
+let paragraph = document.querySelector("h3 + p");
+
+
+
+
+let img1 = document.querySelector("article:nth-child(1) img");
+
+
+
+/*create element laver et nyt html element fx en article, div eller paragraph*/
+let newArticle = document.createElement("article");
+let mainSection = document.querySelector("section");
+let overskrift = document.createElement("h3");
+let newParagraph = document.createElement("p");
+
+/* createTextNode laver en tekst string, som man kan putte ind i forskellige elementer*/
+let overskriftText = document.createTextNode("artikel 3");
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", start);
+
+document.addEventListener("click", skiftBillede);
+
+
+function skiftBillede(){
+    let randomNum = Math.round(Math.random()*10);
+img1.src="https://placeimg.com/640/480/arch"+randomNum;
+console.log(randomNum);
+}
+
+function start() {
+    console.log("DOM loaded");
+
+    article2.innerHTML = "artikel 2 ændret";
+article2Paragraph.innerHTML = "ny tekst i paragraph";
+
+article.textContent = "artikel 1 ændret";
+articleParagraph.textContent = "ny paragraph";
+
+   /* img1.src = "laptop.jpg";
+img1.alt = "laptop på bord";
+*/
+    mainSection.appendChild(newArticle);
+newArticle.appendChild(overskrift);
+newArticle.appendChild(newParagraph);
+overskrift.appendChild(overskriftText);
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>
